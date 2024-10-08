@@ -76,7 +76,7 @@ body {
 .pots__header > span {
   font-size: 1rem;
   color: var(--clr-font-3);
-  font-weight: 600;
+  font-weight: bold;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   transition: 0.2s;
@@ -101,9 +101,8 @@ body {
     "totalSaved ticket laptop";
   gap: 1.35rem;
   padding-bottom: 30px;
-  transition: 1s;
 }
-.pots.non-expanded .pots-stats{
+.pots.non-expanded .pots-stats {
   display: none;
 }
 .pots.non-expanded .pots__header > span::after {
@@ -120,11 +119,12 @@ body {
 .pots-stats__total-saved {
   grid-area: totalSaved;
   background: var(--clr-bg);
-  padding: 30px 20px;
-  width: 250px;
+  padding: 0 20px;
+  width: 350px;
   margin-left: 30px;
   line-height: 2.2rem;
   position: relative;
+  align-content: center;
 }
 .pots-stats span {
   color: var(--clr-font-3);
@@ -141,7 +141,7 @@ body {
   font-weight: normal;
 }
 .pots-stats__total-saved :not(:first-child) {
-  padding-left: 50px;
+  padding-left: 60px;
 }
 .pots-stats__total-saved > p {
   font-size: 2rem;
@@ -162,4 +162,155 @@ body {
 .pots-stats__laptop {
   grid-area: laptop;
   border-left: 5px solid var(--clr-border-4);
+}
+.transactions {
+  margin-top: 30px;
+  background: var(--clr-primary);
+  padding: 30px 40px;
+}
+.transactions__header,
+.transactions__list .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.transactions__header {
+  padding-bottom: 20px;
+}
+.transactions__header > span {
+  font-size: 1rem;
+  color: var(--clr-font-3);
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.transactions__header > span:hover {
+  border-bottom-color: var(--clr-font-3);
+}
+.transactions__header > span::after {
+  content: "keyboard_arrow_up";
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.transactions__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.transactions.non-expanded .transactions__list {
+  display: none;
+}
+.transactions.non-expanded .transactions__header > span::after {
+  content: "keyboard_arrow_down";
+}
+.transactions__list .list-item {
+  border-left: 4px solid var(--clr-font-1);
+  border-radius: 50px;
+  padding: 30px 20px;
+}
+.transactions__list .list-item__contacts > :first-child {
+  font-size: 2.35rem;
+  color: var(--clr-font-1);
+  font-weight: normal;
+  vertical-align: middle;
+}
+.transactions__list .list-item__contacts > :last-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-left: 15px;
+}
+.transactions__list .list-item__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.transactions__list .list-item__stats > span[class] {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.transactions__list .list-item__stats--plus {
+  --clr-plus: hsl(84, 54%, 59%);
+  color: var(--clr-plus);
+}
+.transactions__list .list-item__stats--minus {
+  --clr-minus: hsl(0, 65%, 63%);
+  color: var(--clr-minus);
+}
+.transactions__list .list-item__stats span:last-child {
+  font-size: 1rem;
+  color: var(--clr-font-3);
+}
+
+.recurring-bills {
+  margin-top: 30px;
+  background: var(--clr-primary);
+  padding: 30px 40px;
+}
+.recurring-bills__header,
+.recurring-bills__stats > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recurring-bills__header {
+  padding-bottom: 20px;
+}
+.recurring-bills__header > span {
+  font-size: 1rem;
+  color: var(--clr-font-3);
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.recurring-bills__header > span:hover {
+  border-bottom-color: var(--clr-font-3);
+}
+.recurring-bills__header > span::after {
+  content: "keyboard_arrow_up";
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.recurring-bills__stats {
+  margin: 0 20px 0 20px;
+}
+.recurring-bills__stats > * {
+  background: var(--clr-bg);
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.recurring-bills__stats :nth-child(3n) {
+  border-left-color: var(--clr-border-2);
+}
+.recurring-bills__stats :nth-child(3n + 1) {
+  border-left-color: var(--clr-border-1);
+}
+.recurring-bills__stats :nth-child(3n + 2) {
+  border-left-color: var(--clr-border-4);
+}
+.recurring-bills__stats span:first-child {
+  color: var(--clr-font-3);
+}
+.recurring-bills.non-expanded .recurring-bills__stats {
+  display: none;
+}
+.recurring-bills.non-expanded .recurring-bills__header > span::after {
+  content: "keyboard_arrow_down";
+}
+.recurring-bills__stats .list-item {
+  border-left: 4px solid var(--clr-font-1);
+  padding: 30px 20px;
 }
