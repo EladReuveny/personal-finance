@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Finance App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="personal-finance-container">
+      <h2>Overview</h2>
+
+      <section class="header-stats">
+        <div class="current-balance">
+          <h3 class="current-balance__title">Current Balance</h3>
+          <span class="current-balance__text">$4,836.00</span>
+        </div>
+        <div class="income">
+          <h3 class="income__title">Income</h3>
+          <span class="income__text">$3,814.25</span>
+        </div>
+        <div class="expenses">
+          <h3 class="expenses__title">Expenses</h3>
+          <span class="expenses__text">$1,700.50</span>
+        </div>
+      </section>
+
+      <section class="pots">
+        <div class="pots__header">
+          <h4>Pots</h4>
+          <span>See Details</span>
+        </div>
+        <div class="pots-stats">
+          <div class="pots-stats__total-saved">
+            <span class="material-symbols-outlined"> savings </span>
+            <span>Total Saved</span>
+            <p>$850</p>
+          </div>
+          <div class="pots-stats__savings">
+            <span>Savings</span>
+            <p>$159</p>
+          </div>
+          <div class="pots-stats__gift">
+            <span>Gift</span>
+            <p>$40</p>
+          </div>
+          <div class="pots-stats__ticket">
+            <span>Concert Ticket</span>
+            <p>$40</p>
+          </div>
+          <div class="pots-stats__laptop">
+            <span>New Laptop</span>
+            <p>$10</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="transactions">
+        <div class="transactions__header">
+          <h4>Transactions</h4>
+          <span>View All</span>
+        </div>
+        <div class="transactions__list">
+          <div class="list-item">
+            <div class="list-item__contacts">
+              <!-- img -->
+              <span>Emma Richardson</span>
+            </div>
+            <div class="list-item__stats">
+              <span class="list-item__stats--plus">+$75.50</span>
+              <span>19 Aug 2024</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item__contacts">
+              <!-- img -->
+              <span>Savory Bites Bistro</span>
+            </div>
+            <div class="list-item__stats">
+              <span class="list-item__stats--plus">-$55.50</span>
+              <span>19 Aug 2024</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item__contacts">
+              <!-- img -->
+              <span>Daniel Carter</span>
+            </div>
+            <div class="list-item__stats">
+              <span class="list-item__stats--plus">+$42.30</span>
+              <span>18 Aug 2024</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item__contacts">
+              <!-- img -->
+              <span>Sun Park</span>
+            </div>
+            <div class="list-item__stats">
+              <span class="list-item__stats--plus">+$120.00</span>
+              <span>17 Aug 2024</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-item__contacts">
+              <!-- img -->
+              <span>Urban Services Hub</span>
+            </div>
+            <div class="list-item__stats">
+              <span class="list-item__stats--plus">-$65.00</span>
+              <span>17 Aug 2024</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="budgets">
+        <div class="budgets__header">
+          <h4>Budgets</h4>
+          <span>See Details</span>
+        </div>
+        <!-- diagram -->
+        <div class="budgets__stats">
+          <div class="entertainment">
+            <h4>Entertainment</h4>
+            <span>$50.00</span>
+          </div>
+          <div class="bills">
+            <h4>Bills</h4>
+            <span>$750.00</span>
+          </div>
+          <div class="dining-out">
+            <h4>Dining Out</h4>
+            <span>$75.00</span>
+          </div>
+          <div class="personal-care">
+            <h4>Personal Care</h4>
+            <span>$100.00</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recurring-bills">
+        <div class="reccuring-bills__header">
+          <h2>Recurring Bills</h2>
+          <span>See Details</span>
+        </div>
+        <div class="reccuring-bills_stats">
+          <div class="paid-bills">
+            <span>Paid Bills</span>
+            <span>$190.00</span>
+          </div>
+          <div class="total-upcomig">
+            <span>Total Upcoming</span>
+            <span>$194.98</span>
+          </div>
+          <div class="due-soon">
+            <span>Due Soon</span>
+            <span>$59.98</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
