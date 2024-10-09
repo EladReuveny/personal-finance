@@ -444,8 +444,12 @@ section {
 /* Media queries */
 
 @media (max-width: 1240px) {
+  .personal-finance-container > h2 {
+    margin-inline: 25px;
+  }
   .header-stats {
     flex-direction: column;
+    margin-inline: 25px;
   }
 }
 @media (max-width: 768px) {
@@ -453,18 +457,19 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-      "totalSaved totalSaved"
-      "savings gift"
-      "ticket laptop";
+    "totalSaved totalSaved"
+    "savings gift"
+    "ticket laptop";
     gap: 1rem;
     padding: 0;
   }
   .pots-stats__total-saved {
-    padding: 10px;
+    padding: 30px;
     width: 80%;
   }
   .pots-stats > div {
     height: fit-content;
+    margin-left: 40px;
   }
   section {
     margin: 0 25px;
