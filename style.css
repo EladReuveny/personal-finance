@@ -22,6 +22,9 @@
   --clr-border-3: hsl(250, 5%, 45%);
   --clr-border-4: hsl(29, 62%, 84%);
 }
+* {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Arial, sans-serif;
   font-size: var(--font-size);
@@ -70,7 +73,6 @@ section {
 .pots {
   background: var(--clr-primary);
   border-radius: 10px;
-  /* width: 700px; */
 }
 .pots__header {
   display: flex;
@@ -214,7 +216,6 @@ section {
 }
 .transactions__list .list-item {
   border-left: 4px solid var(--clr-font-1);
-  border-radius: 10px;
   padding: 30px 20px;
 }
 .transactions__list .list-item__contacts > :first-child {
@@ -395,7 +396,6 @@ section {
   height: 90px;
   background: var(--clr-dark);
   margin: 0;
-  border-radius: 8px;
 }
 .nav-bar ul {
   display: flex;
@@ -404,16 +404,13 @@ section {
   list-style: none;
 }
 .nav-bar li {
-  border-bottom: 5px solid transparent;
   transition: 0.3s;
 }
 .nav-bar li:hover {
-  border-bottom-color: var(--clr-border-1);
+  border-bottom: 5px solid var(--clr-border-1);
 }
 .nav-bar li.active {
   background: var(--clr-bg);
-  margin: 10px 0;
-  border-radius: 10px;
   border: none;
   transition: 0.5s;
 }
@@ -442,4 +439,63 @@ section {
 }
 .nav-bar li:nth-child(4) i {
   rotate: 180deg;
+}
+
+/* Media queries */
+
+@media (max-width: 1240px) {
+  .header-stats {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .pots-stats {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "totalSaved totalSaved"
+      "savings gift"
+      "ticket laptop";
+    gap: 1rem;
+    padding: 0;
+  }
+  .pots-stats__total-saved {
+    padding: 10px;
+    width: 80%;
+  }
+  .pots-stats > div {
+    height: fit-content;
+  }
+  section {
+    margin: 0 25px;
+  }
+  .transactions {
+    padding-inline: 10px;
+  }
+  .transactions .transactions__list > div {
+    padding-inline: 10px;
+  }
+  .budgets .budgets__stats-container {
+    flex-direction: column;
+  }
+  .budgets .budgets__stats {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .recurring-bills {
+    padding-inline: 20px;
+  }
+  .recurring-bills .recurring-bills__stats {
+    margin-inline: 0;
+  }
+  .nav-bar ul li a {
+    padding-inline: 10px;
+    font-size: 0.75rem;
+  }
+  .nav-bar {
+    overflow: auto;
+  }
 }

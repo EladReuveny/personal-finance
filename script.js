@@ -29,9 +29,9 @@ seeDetails3.addEventListener("click", () => {
 const listItems = document.querySelectorAll(".nav-bar ul li");
 
 listItems.forEach((item) =>
-  item.addEventListener("click", (e) => {
+  item.addEventListener("click", () => {
     listItems.forEach((li) => li.classList.remove("active"));
 
-    e.target.closest("li").classList.add("active");
+    item.classList.add("active");
   })
 );
