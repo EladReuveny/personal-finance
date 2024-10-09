@@ -8,14 +8,20 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="personal-finance-container">
       <h2>Overview</h2>
 
-      <section class="header-stats">
+      <section id="header-stats" class="header-stats">
         <div class="current-balance">
           <h3 class="current-balance__title">Current Balance</h3>
           <span class="current-balance__text">$4,836.00</span>
@@ -30,7 +36,7 @@
         </div>
       </section>
 
-      <section class="pots">
+      <section id="pots" class="pots">
         <div class="pots__header">
           <h3>Pots</h3>
           <span>See Details</span>
@@ -60,7 +66,7 @@
         </div>
       </section>
 
-      <section class="transactions">
+      <section id="transactions" class="transactions">
         <div class="transactions__header">
           <h3>Transactions</h3>
           <span>View All</span>
@@ -119,33 +125,35 @@
         </div>
       </section>
 
-      <section class="budgets">
+      <section id="budgets" class="budgets">
         <div class="budgets__header">
           <h3>Budgets</h3>
           <span>See Details</span>
         </div>
-        <!-- diagram -->
-        <div class="budgets__stats">
-          <div class="entertainment">
-            <h4>Entertainment</h4>
-            <span>$50.00</span>
-          </div>
-          <div class="bills">
-            <h4>Bills</h4>
-            <span>$750.00</span>
-          </div>
-          <div class="dining-out">
-            <h4>Dining Out</h4>
-            <span>$75.00</span>
-          </div>
-          <div class="personal-care">
-            <h4>Personal Care</h4>
-            <span>$100.00</span>
+        <div class="budgets__stats-container">
+          <img src="./assets/images/diagram_image.png" alt="" />
+          <div class="budgets__stats">
+            <div class="entertainment">
+              <h4>Entertainment</h4>
+              <span>$50.00</span>
+            </div>
+            <div class="bills">
+              <h4>Bills</h4>
+              <span>$750.00</span>
+            </div>
+            <div class="dining-out">
+              <h4>Dining Out</h4>
+              <span>$75.00</span>
+            </div>
+            <div class="personal-care">
+              <h4>Personal Care</h4>
+              <span>$100.00</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="recurring-bills">
+      <section id="recurring-bills" class="recurring-bills">
         <div class="recurring-bills__header">
           <h3>Recurring Bills</h3>
           <span>See Details</span>
@@ -164,6 +172,43 @@
             <span>$59.98</span>
           </div>
         </div>
+      </section>
+
+      <section class="nav-bar">
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="#header-stats">
+                <i class="fa-solid fa-house"></i>
+                Overview
+              </a>
+            </li>
+            <li>
+              <a href="#pots">
+                <i class="fa-solid fa-sack-dollar"></i>
+                Pots
+              </a>
+            </li>
+            <li>
+              <a href="#transactions">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                Transactions
+              </a>
+            </li>
+            <li>
+              <a href="#budgets">
+                <i class="fa-duotone fa-solid fa-chart-pie"></i>
+                Budgets
+              </a>
+            </li>
+            <li>
+              <a href="#recurring-bills">
+                <i class="fa-sharp fa-solid fa-money-check-dollar"></i>
+                Recurring Bills
+              </a>
+            </li>
+          </ul>
+        </nav>
       </section>
     </div>
     <script type="module" src="script.js"></script>

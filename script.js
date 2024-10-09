@@ -12,9 +12,26 @@ viewAll.addEventListener("click", () => {
   transactions.classList.toggle("non-expanded");
 });
 
-const seeDetails2 = document.querySelector(".recurring-bills__header > span");
-const recurringBills = document.querySelector(".recurring-bills");
+const seeDetails2 = document.querySelector(".budgets__header > span");
+const budgets = document.querySelector(".budgets");
 
 seeDetails2.addEventListener("click", () => {
+  budgets.classList.toggle("non-expanded");
+});
+
+const seeDetails3 = document.querySelector(".recurring-bills__header > span");
+const recurringBills = document.querySelector(".recurring-bills");
+
+seeDetails3.addEventListener("click", () => {
   recurringBills.classList.toggle("non-expanded");
 });
+
+const listItems = document.querySelectorAll(".nav-bar ul li");
+
+listItems.forEach((item) =>
+  item.addEventListener("click", (e) => {
+    listItems.forEach((li) => li.classList.remove("active"));
+
+    e.target.closest("li").classList.add("active");
+  })
+);
