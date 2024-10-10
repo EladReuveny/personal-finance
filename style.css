@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -15,6 +17,7 @@
   --clr-font-3: hsl(252, 3%, 63%);
   --clr-font-4: hsl(240, 1%, 71%);
 
+  --font-family: 'Roboto', sans-serif;
   --font-size: 1.35rem;
 
   --clr-border-1: hsl(177, 31%, 38%);
@@ -26,7 +29,7 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--clr-font-1);
   height: 100vh;
@@ -35,17 +38,16 @@ body {
 .personal-finance-container {
   overflow: auto;
 }
-.personal-finance-container > h2 {
-  margin: 3rem;
+.personal-finance-container #overview {
+  margin: 50px;
   font-size: 2.25rem;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 .header-stats {
   color: var(--clr-font-1);
   display: flex;
   gap: 1.5rem;
-  margin: 1rem 3rem;
   margin-top: -15px;
 }
 .header-stats > div {
@@ -68,7 +70,7 @@ body {
   background: var(--clr-dark);
 }
 section {
-  margin: 0 50px;
+  margin: 30px 50px 0 50px;
 }
 .pots {
   background: var(--clr-primary);
@@ -137,18 +139,20 @@ section {
   color: var(--clr-font-3);
   font-size: 1rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 .pots-stats__total-saved :first-child {
   position: absolute;
   top: 50%;
-  left: 15px;
+  margin-left: 20px;
   translate: 0 -50%;
   font-size: 2.75rem;
   color: var(--clr-border-1);
   font-weight: normal;
+  vertical-align: middle;
 }
 .pots-stats__total-saved :not(:first-child) {
-  padding-left: 60px;
+  padding-left: 80px;
 }
 .pots-stats__total-saved > p {
   font-size: 2rem;
@@ -449,7 +453,7 @@ section {
   }
   .header-stats {
     flex-direction: column;
-    margin-inline: 25px;
+    /* margin-inline: 25px; */
   }
 }
 @media (max-width: 768px) {
@@ -457,9 +461,9 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-    "totalSaved totalSaved"
-    "savings gift"
-    "ticket laptop";
+      "totalSaved totalSaved"
+      "savings gift"
+      "ticket laptop";
     gap: 1rem;
     padding: 0;
   }
@@ -471,14 +475,12 @@ section {
     height: fit-content;
     margin-left: 40px;
   }
-  section {
-    margin: 0 25px;
+  section,
+  .personal-finance-container #overview {
+    margin-inline: 25px;
   }
   .transactions {
-    padding-inline: 10px;
-  }
-  .transactions .transactions__list > div {
-    padding-inline: 10px;
+    padding-inline: 40px 10px;
   }
   .budgets .budgets__stats-container {
     flex-direction: column;
