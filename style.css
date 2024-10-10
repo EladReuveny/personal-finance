@@ -424,8 +424,8 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 30px 5px 30px;
-  gap: 4px;
+  padding: 20px 30px 12px 30px;
+  gap: 10px;
   color: var(--clr-border-3);
   color: var(--clr-font-4);
   font-size: 1rem;
